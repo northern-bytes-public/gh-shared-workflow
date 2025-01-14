@@ -10,8 +10,17 @@ on:
   workflow_call:
 
 jobs:
+  test:
+    runs-on: ubuntu-lates
+    steps:
+      - run: echo "Testing!"
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "Hello world"
+      - run: echo "Building!"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying!"
+
+  
